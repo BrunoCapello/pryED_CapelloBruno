@@ -28,63 +28,100 @@ namespace pryED_CapelloBruno
         {
             if (Primero == null)
             {
+                Nvo.siguiente = null;
+                Nvo.Anterior = null;
                 Primero = Nvo;
                 Ultimo = Nvo;
+                return;
+            }
 
+            // Insert before first
+            if (Nvo.Codigo < Primero.Codigo)
+            {
+                Nvo.siguiente = Primero;
+                Nvo.Anterior = null;
+                Primero.Anterior = Nvo;
+                Primero = Nvo;
+                return;
+            }
+
+            // Find insertion point
+            clsNodo aux = Primero;
+            while (aux != null && aux.Codigo < Nvo.Codigo)
+            {
+                aux = aux.siguiente;
+            }
+
+            if (aux == null)
+            {
+                // Insert at end
+                Ultimo.siguiente = Nvo;
+                Nvo.Anterior = Ultimo;
+                Nvo.siguiente = null;
+                Ultimo = Nvo;
             }
             else
             {
-                if (Nvo.Codigo < Primero.Codigo)
-                {
-                    Nvo.siguiente = Primero;
-                    Primero.Anterior = Nvo;
-                    Primero = Nvo;
-                }
-                else
-                {
-                    clsNodo Aux = Primero;
-                    clsNodo Ant = Primero;
-
-                    while (Aux.Codigo < Nvo.Codigo)
-                    {
-                        Ant = Aux;
-                        Aux = Aux.siguiente;
-                    }
-                    Ant.siguiente = Nvo;
-                    Nvo.siguiente = Aux;
-                    Aux.Anterior = Nvo;
-                    Nvo.Anterior = Ant;
-                }
+                // Insert before aux
+                clsNodo prev = aux.Anterior;
+                prev.siguiente = Nvo;
+                Nvo.Anterior = prev;
+                Nvo.siguiente = aux;
+                aux.Anterior = Nvo;
             }
         }
 
         public void Eliminar(Int32 Codigo)
         {
-            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            if (Primero == null)
+            {
+                return;
+            }
+
+            // Only one node
+            if (Primero == Ultimo && Primero.Codigo == Codigo)
             {
                 Primero = null;
                 Ultimo = null;
-
+                return;
             }
-            else
+
+            // Delete first
+            if (Primero.Codigo == Codigo)
             {
-                if (Primero.Codigo == Codigo)
+                Primero = Primero.siguiente;
+                if (Primero != null)
                 {
-                    Primero = Primero.siguiente;
                     Primero.Anterior = null;
                 }
                 else
                 {
-                    clsNodo aux = Primero;
-                    clsNodo ant = Primero;
-                    while (aux.Codigo != Codigo)
-                    {
-                        ant = aux;
-                        aux = aux.siguiente;
-                    }
-                    ant.siguiente = aux.siguiente;
-                    aux.siguiente.Anterior = ant;
+                    Ultimo = null;
                 }
+                return;
+            }
+
+            clsNodo aux = Primero.siguiente;
+            while (aux != null && aux.Codigo != Codigo)
+            {
+                aux = aux.siguiente;
+            }
+
+            if (aux == null)
+            {
+                // Not found
+                return;
+            }
+
+            if (aux == Ultimo)
+            {
+                aux.Anterior.siguiente = null;
+                Ultimo = aux.Anterior;
+            }
+            else
+            {
+                aux.Anterior.siguiente = aux.siguiente;
+                aux.siguiente.Anterior = aux.Anterior;
             }
         }
 
@@ -107,6 +144,28 @@ namespace pryED_CapelloBruno
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerLista(ListBox lista)
+        {
+            clsNodo aux = Primero;
+            lista.Items.Clear();
+            while (aux != null)
+            {
+                lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.siguiente;
+            }
+        }
+
+        public void RecorrerCombo(ComboBox combo)
+        {
+            clsNodo aux = Primero;
+            combo.Items.Clear();
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Codigo);
+                aux = aux.siguiente;
             }
         }
     }

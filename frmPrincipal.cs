@@ -32,13 +32,25 @@ namespace pryED_CapelloBruno
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPrincipal cerrar = new frmPrincipal();
-            cerrar.Close();
+            this.Close();
         }
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPila Pila = new frmPila();
             Pila.ShowDialog();
+        }
+
+        private void lToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLista ListaSimple = new frmLista();
+            ListaSimple.ShowDialog();
+        }
+
+        private void lDEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble ListaDoble = new frmListaDoble();
+            ListaDoble.ShowDialog();
         }
     }
 }

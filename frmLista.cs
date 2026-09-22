@@ -27,11 +27,11 @@ namespace pryED_CapelloBruno
             Persona.Tramite = txtTramite.Text;
 
             ListaSimple.Agregar(Persona);
-            LosRecorrer();
-            ListaSimple.Eliminar(Convert.ToInt32(txtCodigo.Text));
+
+            LimpiarTodo();
         }
 
-        private void LimpiarTodo()
+        public void LimpiarTodo()
         {
             txtCodigo.Clear();
             txtNombre.Clear();

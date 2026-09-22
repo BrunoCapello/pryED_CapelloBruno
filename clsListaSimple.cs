@@ -60,7 +60,9 @@ namespace pryED_CapelloBruno
                 ant.siguiente = aux.siguiente;
             }
         }
+
         
+
         public void RecorrerDGV(DataGridView dgv)
         {
             clsNodo aux = Primero;

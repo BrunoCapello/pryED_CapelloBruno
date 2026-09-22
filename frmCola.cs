@@ -42,17 +42,21 @@ namespace pryED_CapelloBruno
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (objCola.Primero == null)
+            if (objCola.Primero != null)
             {
                 objCola.Eliminar();
 
                 objCola.Recorrer(lbListado);
                 objCola.RecorrerDGV(dgvListado);
             }
+            else
+            {
+                MessageBox.Show("La cola está vacía");
+            }
 
-            txtCodigo.Clear();
-            txtNombre.Clear();
-            txtTramite.Clear();
+            lblMuestraNombre.Text = "";
+            lblMuestraCodigo.Text = "";
+            lblMuestraTramite.Text = "";
         }
 
         private void dgvListado_CellClick(object sender, DataGridViewCellEventArgs e)
