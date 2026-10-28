@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBaseDeDatos.cs" />
     <Compile Include="clsCola.cs" />
     <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
@@ -59,6 +60,18 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaConOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaConOperaciones.Designer.cs">
+      <DependentUpon>frmConsultaConOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarTablas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarTablas.Designer.cs">
+      <DependentUpon>frmMostrarTablas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLista.cs">
       <SubType>Form</SubType>
@@ -71,6 +84,12 @@
     </Compile>
     <Compile Include="frmListaDoble.Designer.cs">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperaciones.Designer.cs">
+      <DependentUpon>frmOperaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
@@ -89,11 +108,20 @@
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaConOperaciones.resx">
+      <DependentUpon>frmConsultaConOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarTablas.resx">
+      <DependentUpon>frmMostrarTablas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLista.resx">
       <DependentUpon>frmLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperaciones.resx">
+      <DependentUpon>frmOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>

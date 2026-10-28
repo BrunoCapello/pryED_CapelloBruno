@@ -42,6 +42,12 @@
             this.arbolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gruposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarUnaTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.operacionesEnBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaVariasOperacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,9 +150,50 @@
             // 
             // baseDeDatosToolStripMenuItem
             // 
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarUnaTablaToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.consultaBaseDeDatosToolStripMenuItem,
+            this.operacionesEnBaseDeDatosToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.consultaVariasOperacionesToolStripMenuItem});
             this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.baseDeDatosToolStripMenuItem.Text = "Base de Datos";
+            // 
+            // mostrarUnaTablaToolStripMenuItem
+            // 
+            this.mostrarUnaTablaToolStripMenuItem.Name = "mostrarUnaTablaToolStripMenuItem";
+            this.mostrarUnaTablaToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.mostrarUnaTablaToolStripMenuItem.Text = "Mostrar una tabla";
+            // 
+            // consultaBaseDeDatosToolStripMenuItem
+            // 
+            this.consultaBaseDeDatosToolStripMenuItem.Name = "consultaBaseDeDatosToolStripMenuItem";
+            this.consultaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.consultaBaseDeDatosToolStripMenuItem.Text = "Consulta base de datos";
+            // 
+            // operacionesEnBaseDeDatosToolStripMenuItem
+            // 
+            this.operacionesEnBaseDeDatosToolStripMenuItem.Name = "operacionesEnBaseDeDatosToolStripMenuItem";
+            this.operacionesEnBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.operacionesEnBaseDeDatosToolStripMenuItem.Text = "Operaciones en base de datos";
+            // 
+            // consultaVariasOperacionesToolStripMenuItem
+            // 
+            this.consultaVariasOperacionesToolStripMenuItem.Name = "consultaVariasOperacionesToolStripMenuItem";
+            this.consultaVariasOperacionesToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.consultaVariasOperacionesToolStripMenuItem.Text = "Consulta varias operaciones";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(289, 6);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(289, 6);
             // 
             // frmPrincipal
             // 
@@ -182,6 +229,12 @@
         private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem datosDelDesarrolladorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarUnaTablaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem consultaBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem operacionesEnBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem consultaVariasOperacionesToolStripMenuItem;
     }
 }
 
