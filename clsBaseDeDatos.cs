@@ -17,7 +17,7 @@ namespace pryED_CapelloBruno
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador;
 
-        string cadena = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Libreria.mdb";
+        string cadena = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..//..//Libreria.mdb";
 
         public void Listar(DataGridView dgv, string tabla)
         {
